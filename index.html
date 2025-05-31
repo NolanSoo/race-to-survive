@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Race to Survive</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1>Race to Survive</h1>
+  <div class="setup-section">
+    <h2>Setup Your Study Session</h2>
+    <label>Topic Title: <input type="text" id="topicTitle" placeholder="e.g., Photosynthesis" /></label>
+    <br />
+    <label>Notes: <textarea id="topicNotes" placeholder="Notes or instructions..."></textarea></label>
+    <br />
+    <label>Number of Questions: <input type="number" id="numQuestions" min="1" max="100" value="25" /></label>
+    <br />
+    <label>Question Types:
+      <select id="questionTypePercent">
+        <option value="100,0">All Multiple Choice</option>
+        <option value="50,50">50% MC / 50% Short Answer</option>
+        <option value="0,100">All Short Answer</option>
+        <option value="70,30">70% MC / 30% Short Answer</option>
+        <option value="30,70">30% MC / 70% Short Answer</option>
+      </select>
+    </label>
+    <br />
+    <button id="startBtn">Start Study Session</button>
+  </div>
+</header>
+
+<main>
+  <section id="questionSection" class="hidden">
+    <h2 id="questionCount"></h2>
+    <div id="questionContainer"></div>
+    <div id="timer"></div>
+    <button id="nextBtn" class="hidden">Next Question</button>
+    <div id="feedback"></div>
+  </section>
+
+  <section id="resultsSection" class="hidden">
+    <h2>Session Results</h2>
+    <div id="scoreSummary"></div>
+    <button id="restartBtn">Start New Session</button>
+    <div id="recommendations"></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
